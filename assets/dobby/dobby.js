@@ -121,7 +121,7 @@ function getDate(){
   
 function todayPoint(initial, delta) {
     let date = getDate();
-    return initial + (delta * (date - 1));
+    return int(initial) + (delta * (date - 1));
 };
   
 function tomorrowPoint(initial, delta){
@@ -131,16 +131,17 @@ function tomorrowPoint(initial, delta){
     if (remaining === 0) {
       return initial.toLocaleString();
     }
-    return initial + (delta * date);
+    return int(initial) + (delta * date);
 };
   
   /**************************************************/
 // Updates
 function numberWithCommas(x) {
-    x = Math.round(x);
-    var parts = x.toString().split(".");
-    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    return parts.join(".");
+    // x = Math.round(x);
+    // var parts = x.toString().split(".");
+    // parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    // return parts.join(".");
+    return x
 }
 // updateTime
 function updateTime(){
