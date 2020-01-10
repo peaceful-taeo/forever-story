@@ -121,7 +121,7 @@ function getDate(){
   
 function todayPoint(initial, delta) {
     let date = getDate();
-    return initial + (delta * (date - 1)).toLocaleString();
+    return initial + (delta * (date - 1));
 };
   
 function tomorrowPoint(initial, delta){
@@ -131,7 +131,7 @@ function tomorrowPoint(initial, delta){
     if (remaining === 0) {
       return initial.toLocaleString();
     }
-    return initial + (delta * date).toLocaleString();
+    return initial + (delta * date);
 };
   
   /**************************************************/
