@@ -176,8 +176,33 @@ function load(){
         $("#header2-1").css('background-image',`url(${main["그림url"]})`);
 
         $("#main-paint").html(`
-        <div class="mbr-section-btn">
-            <a class="btn display-4" href="#next" style="position: absolute; bottom: 35px; left: 5%; background-color: rgba(80, 80, 80, 0.5); color: white; font-family: COPRGTB;">
+
+        <style>
+    
+            .main-total-score {           
+                background-color: rgba(80, 80, 80, 0.5); 
+                color: white; 
+                font-family: COPRGTB;
+            }
+
+            @media (min-width: 767px){
+                .main-total-left {
+                    position: absolute; 
+                    bottom: 35px; 
+                    left: 5%; 
+                }
+
+                .main-total-right {
+                    position: absolute; 
+                    bottom: 35px; 
+                    right: 5%; 
+                }
+            }
+
+         </style>
+
+        <div class="mbr-section-btn align-center">
+            <a class="main-total-score main-total-left btn display-4" href="#next">
                 <span class="mobi-mbri mobi-mbri-cash mbr-iconfont mbr-iconfont-btn"></span>
                 ${info["오늘점수"]}
                 <br>${numberWithCommas(todayPoint(
@@ -185,7 +210,7 @@ function load(){
                     main["변화값"]
                   ))}<br>
             </a>
-            <a class="btn display-4" href="#next" style="position: absolute; bottom: 35px; right: 5%; background-color: rgba(80, 80, 80, 0.5); color: white; font-family: COPRGTB;">
+            <a class="main-total-score main-total-right btn display-4" href="#next">
                 <span class="mobi-mbri mobi-mbri-cash mbr-iconfont mbr-iconfont-btn"></span>
                 ${info["내일점수"]}
                 <br>${numberWithCommas(tomorrowPoint(
