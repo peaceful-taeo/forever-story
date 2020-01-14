@@ -9,10 +9,13 @@
   width: 25%;
   cursor: pointer; }
 
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
+  .mbr-gallery .mbr-gallery-item {
+    width: 33%; } }
+@media (max-width: 980px) {
   .mbr-gallery .mbr-gallery-item {
     width: 50%; } }
-@media (max-width: 400px) {
+@media (max-width: 650px) {
   .mbr-gallery .mbr-gallery-item {
     width: 100%; } }
 .mbr-gallery .icon-focus,
